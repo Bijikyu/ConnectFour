@@ -4,30 +4,31 @@ body {
     align-items: center;
     position: relative;
     background-color: white;
-    /* TODO import fonts */
-    font-family: sans-serif;
+    font-family: 'Karla', sans-serif;
     text-align: center;
-    color: darkslategray;
+    color: dimgray;
+    font-size: 2vw;
 }
 
-h2 {
-    margin: 0px 0px 7px 0px;
-    background-color: darkturquoise;
+h1 {
+    font-family: 'Montez', cursive, sans-serif;
+    margin: 5px 0px 6px 0px;
+    font-size: 6vw;
+    width:100%
 }
 
 #top {
     width: 100%;
-    background-color: darkviolet;
+    height: 3vh;
 }
 
 p {
-    height: 25px;
-    width: 15vw;
+    height: 20px;
+    width: 40vw;
     margin: 0px 0px 7px 0px;
-    padding: 10px 0px 0px 0px;
-    margin-left: 42vw;
-    font-size: 12px;
-    background-color: deepskyblue;
+    padding: 2px 5px 12px 5px;
+    margin-left: 28.5vw;
+    font-size: 16px;
 }
 
 /* GAME BOARD */
@@ -41,7 +42,6 @@ p {
     width: 100%;
     max-height: 100vh;
     max-width: 100vh;
-    background-color: dimgrey;
 }
 
 #brdGme {
@@ -50,25 +50,22 @@ p {
     max-height: 100vh;
     max-width: 100vh;
     margin-top: 0px;
-    background-color: dodgerblue;
 }
 
 /* GAME HOLES AS BUTTONS */
 
-
 .c4Hol {
-    /* TODO: create transparent button background, test with disc 
-    background */
-    width: 11vmin;
-    height: 11vmin;
+    width: 8.6vmin;
+    height: 8.6vmin;
     background:none;
-    background-image: url('https://imgur.com/qSMQ9XE.png');
-    background-size: 78% 78%;
+    background-image: url('https://imgur.com/vsLSXq0.png');
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border: none;
-    padding: 3%;
+    /*padding: 3%;*/
     cursor: pointer;
     position: absolute;
+    outline: 0;
 }
 
 .row1 {
@@ -78,16 +75,16 @@ p {
     top: 11.5%;
 }
 .row3 {
-    top: 21%;
+    top: 22%;
 }
 .row4 {
-    top: 30.8%;
+    top: 32%;
 }
 .row5 {
-    top: 40.65%;
+    top: 42%;
 }
 .row6 {
-    top: 50.4%;
+    top: 52%;
 }
 
 .col1 {
@@ -113,13 +110,17 @@ p {
 }
 
 #replay {
-    top: 19%;
-    left: 131%;
-    font-size: 12px;
-    padding: 2px 2px;
-    border: none;
+    top: 69.5%;
+    left: 42%;
+    font-size: 15px;
+    padding: 3px 3px;
+    border-width:5px;  
+    border-style:outset;
     cursor: pointer;
     border-radius: 5px;
-    height: 100%;
-    width: 20%; 
+    background-color: dimgray;
+    color: white;
+    height: 8%;
+    width: 15%; 
+    position: absolute;
 }

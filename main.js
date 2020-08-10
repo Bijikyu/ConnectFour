@@ -21,17 +21,17 @@ let winner;
 
 const topMsg = document.getElementById('topMsg');
 const theDiv = document.getElementById('theDiv');
-//const brdGme = document.getElementById('brdGme');
 const replay = document.getElementById('replay');
 const c4Hols = document.querySelectorAll('.c4Hol');
 
 /*-------------------------------------4) Event Listeners----------------------------------------*/
 
 theDiv.addEventListener('click', holClk);
-//brdGme.addEventListener('click', holClk);
 replay.addEventListener('click', init);
 
 /*-------------------------------------6) Render Functions---------------------------------------*/
+//TODO When a bottom row item is clicked, the next 
+//higher element in the column becomes "visible" (still invis due to alpha)
 
 let champ;
 
@@ -43,7 +43,7 @@ function render(){
         topMsg.innerText = `${champ} is the champ!`;
     }
     else if (winner !== 't') {
-        turn === 'a' ? topMsg.innerText = 'It is the turn for Player 1' : topMsg.innerText = 'It is the turn for Player 2';
+        turn === 'a' ? topMsg.innerText = 'Player 1 it your turn' : topMsg.innerText = 'Player 2 it is your turn';
     }
     c4Hols.forEach(function(hol, idx) {
         if (board[idx] === 'empty'){
@@ -55,7 +55,16 @@ function render(){
         else {
             (hol).style.backgroundImage = DISPLAY.playerTwo;
         }
+        if ((board[idx] === 'a' || board[idx] === 'b') && idx >= 7) {
+            let itemAbove = idx - 7;
+            c4Hols[itemAbove].style.visibility = 'visible';
+        }
     })
+    
+    /*if (any row element === a or b) {
+        then a next row down element 7 less is unhid
+    }*/
+    //TODO make each button above a clicked row element visible
 }
 
 /*===================================================================================CONTROLLER==*/
@@ -63,20 +72,10 @@ function render(){
 /*------------------------------------------Functions--------------------------------------------*/
 
 function holClk(evt){
-    console.log(evt.target);
     let holIdx = evt.target.id.replace('hol','');
-    console.log('1 ' + board[holIdx]);
     if (board[holIdx] !== 'empty') return;
-    console.log('2 ' + board[holIdx]);
-    console.log('winner is ' + winner);
     if (winner !== null) return;
-    console.log('winner is ' + winner);
-    //TODO if any hole is clicked that is physically higher (lower index)
-    // than a hole in the same column that is empty, return.
     turn === 'a' ? board[holIdx] = 'a' : board[holIdx] = 'b';
-    console.log(board);
-    console.log('turn is ' + turn)
-    console.log('3 ' + board[holIdx])
     turn === 'a' ? turn = 'b' : turn = 'a';
     let row1 = board[0] + board[1] + board[2] + board[3] + board[4] + board[5] + board[6];
     let row2 = board[7] + board[8] + board[9] + board[10] + board[11] + board[12] + board[13];
@@ -113,7 +112,7 @@ function holClk(evt){
 }
 
 /*--------------------------------------5) Init function-----------------------------------------*/
-// Start, reset, replay. Initiate the init function to initialize all state variables.
+// TODO hide all hole btn elements except the bottom row as hidden (still invis bc alpha)
 
 function init(){
     replay.style.visibility = 'hidden';
@@ -123,6 +122,12 @@ function init(){
     for (i=0; i < 42; i++){
         board.push('empty');
     }
+    let hidden = board.slice(0,35);
+    c4Hols.forEach(function(hol, idx) {
+        if (hidden[idx] === 'empty') {
+            (hol).style.visibility = 'hidden';
+        }
+    })
     turn = 'a';
     winner = null;
     render();
@@ -132,12 +137,13 @@ init();
 /* 
 
 Extensions: 
-1) Highlight winning row
+1) Highlight winning row - 
 2) affiliate link
-3) hx and facts of the game
-4) animations for disc dropping
+3) hx and facts of the game (SEO)
+4) animations for disc dropping - jquery?
 5) drag and drop discs
 6) computer driven player 2
 7) multiplayer at a distance
+8) additional column drop buttons
 
 */
