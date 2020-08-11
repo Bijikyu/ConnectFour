@@ -1,12 +1,10 @@
 
-/*========================================================================================MODEL==*/
-
 /*-----------------------------------------1) Constants------------------------------------------*/
 
 const DISPLAY = {
     empty: "url('https://imgur.com/vsLSXq0.png')",
     playerOne: "url('https://imgur.com/qSMQ9XE.png')",
-    playerTwo: "url('https://imgur.com/QJRtftD.png')"
+    playerTwo: "url('https://imgur.com/CvBqm9R.png')"
 }
 
 /*--------------------------------2) Application State (Variables)-------------------------------*/
@@ -14,8 +12,6 @@ const DISPLAY = {
 let board = [];
 let turn;
 let winner;
-
-/*=========================================================================================VIEW==*/
 
 /*---------------------------------3) Cached Element Referances----------------------------------*/
 
@@ -30,8 +26,6 @@ theDiv.addEventListener('click', holClk);
 replay.addEventListener('click', init);
 
 /*-------------------------------------6) Render Functions---------------------------------------*/
-//TODO When a bottom row item is clicked, the next 
-//higher element in the column becomes "visible" (still invis due to alpha)
 
 let champ;
 
@@ -39,11 +33,11 @@ function render(){
     if (winner !== null) replay.style.visibility = 'visible';
     if (winner === 't') topMsg.innerText = 'It is a tie!';
     if (winner === 'a' || winner === 'b'){
-        winner === 'a' ? champ = 'Player 1' : champ = 'Player 2';
-        topMsg.innerText = `${champ} is the champ!`;
+        winner === 'a' ? champ = 'PLAYER 1' : champ = 'PLAYER 2';
+        topMsg.innerText = `${champ} IS THE CHAMP!`;
     }
     else if (winner !== 't') {
-        turn === 'a' ? topMsg.innerText = 'Player 1 it your turn' : topMsg.innerText = 'Player 2 it is your turn';
+        turn === 'a' ? topMsg.innerText = 'Player 1 it is your turn...' : topMsg.innerText = 'Player 2 it is your turn...';
     }
     c4Hols.forEach(function(hol, idx) {
         if (board[idx] === 'empty'){
@@ -60,14 +54,7 @@ function render(){
             c4Hols[itemAbove].style.visibility = 'visible';
         }
     })
-    
-    /*if (any row element === a or b) {
-        then a next row down element 7 less is unhid
-    }*/
-    //TODO make each button above a clicked row element visible
 }
-
-/*===================================================================================CONTROLLER==*/
 
 /*------------------------------------------Functions--------------------------------------------*/
 
@@ -112,7 +99,6 @@ function holClk(evt){
 }
 
 /*--------------------------------------5) Init function-----------------------------------------*/
-// TODO hide all hole btn elements except the bottom row as hidden (still invis bc alpha)
 
 function init(){
     replay.style.visibility = 'hidden';
@@ -133,17 +119,3 @@ function init(){
     render();
 }
 init();
-
-/* 
-
-Extensions: 
-1) Highlight winning row - 
-2) affiliate link
-3) hx and facts of the game (SEO)
-4) animations for disc dropping - jquery?
-5) drag and drop discs
-6) computer driven player 2
-7) multiplayer at a distance
-8) additional column drop buttons
-
-*/
