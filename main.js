@@ -7,6 +7,8 @@ const DISPLAY = {
     playerTwo: "url('https://imgur.com/CvBqm9R.png')"
 }
 
+const tokenDrop = new Audio('tokenDrop.mp3');
+
 /*--------------------------------2) Application State (Variables)-------------------------------*/
 
 let board = [];
@@ -59,6 +61,7 @@ function render(){
 /*------------------------------------------Functions--------------------------------------------*/
 
 function holClk(evt){
+    tokenDrop.play();
     let holIdx = evt.target.id.replace('hol','');
     if (board[holIdx] !== 'empty') return;
     if (winner !== null) return;

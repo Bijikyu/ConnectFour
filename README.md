@@ -21,8 +21,6 @@ Connect four of your tokens in a line to win, whether horizontally, vertically o
 **Next Steps:**
 * Highlight winning row
 * Animations for disc dropping
-* Drag and drop discs
-* Additional column drop buttons
 * Coordinate based event listening on columns of board image
 * Computer driven player 2
 * Multiplayer at a distance
