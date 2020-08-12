@@ -31,6 +31,7 @@ replay.addEventListener('click', init);
 /*-------------------------------------6) Render Functions---------------------------------------*/
 
 let champ;
+endGong.volume = 0.3;
 
 function render(){
     if (winner !== null) replay.style.visibility = 'visible';
@@ -61,6 +62,8 @@ function render(){
 }
 
 /*------------------------------------------Functions--------------------------------------------*/
+
+tokenDrop.volume = 0.3;
 
 function holClk(evt){
     let holIdx = evt.target.id.replace('hol','');
