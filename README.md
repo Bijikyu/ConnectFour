@@ -12,7 +12,7 @@ The tokens displayed are based on coins, silver octopus litra from Siciliy 460 B
 
 **Technologies Used:** Javascript, HTML, CSS.
 
-**Getting Started:** [TBD](https://github.com/Bijikyu/ConnectFour/edit/master/README.md)
+**Getting Started:** [Link to the game](https://bijikyu.github.io/ConnectFour/)
 
 Play this with a friend at your computer. Take turns placing tokens by clicking a hole. Start with the bottom row, but once a token is placed, another can be placed on the hole above it.
 
