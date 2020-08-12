@@ -8,6 +8,7 @@ const DISPLAY = {
 }
 
 const tokenDrop = new Audio('tokenDrop.mp3');
+const endGong = new Audio('endGong.flac');
 
 /*--------------------------------2) Application State (Variables)-------------------------------*/
 
@@ -37,6 +38,7 @@ function render(){
     if (winner === 'a' || winner === 'b'){
         winner === 'a' ? champ = 'PLAYER 1' : champ = 'PLAYER 2';
         topMsg.innerText = `${champ} IS THE CHAMP!`;
+        endGong.play();
     }
     else if (winner !== 't') {
         turn === 'a' ? topMsg.innerText = 'Player 1 it is your turn...' : topMsg.innerText = 'Player 2 it is your turn...';
@@ -61,9 +63,9 @@ function render(){
 /*------------------------------------------Functions--------------------------------------------*/
 
 function holClk(evt){
-    tokenDrop.play();
     let holIdx = evt.target.id.replace('hol','');
     if (board[holIdx] !== 'empty') return;
+    tokenDrop.play();
     if (winner !== null) return;
     turn === 'a' ? board[holIdx] = 'a' : board[holIdx] = 'b';
     turn === 'a' ? turn = 'b' : turn = 'a';
