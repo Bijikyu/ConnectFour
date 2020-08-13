@@ -122,9 +122,9 @@ p {
 }
 
 #replay {
-    top: 73.25%;
-    left: 40%;
-    font-size: 18px;
+    top: 73.33%;
+    left: 39%;
+    font-size: 17px;
     padding: 3px 3px;
     border-width:2px;  
     border-style: outset;
@@ -135,7 +135,7 @@ p {
     font-family: 'Lato', sans-serif;
     color: white;
     height: 8%;
-    width: 19%; 
+    width: 20%; 
     position: absolute;
     letter-spacing: 2px;
 }
