@@ -66,6 +66,18 @@ function render(){
 tokenDrop.volume = 0.3;
 
 function holClk(evt){
+    console.log(evt);
+    /* 
+    if 
+    ((evt.elementFromPoint(x1) to evt.elementFromPoint(x2))is clicked){
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();
+        document.elementFromPoint(x, y).click();      
+    }*/
     let holIdx = evt.target.id.replace('hol','');
     if (board[holIdx] !== 'empty') return;
     tokenDrop.play();

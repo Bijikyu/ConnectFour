@@ -6,7 +6,7 @@ The real-world Connect Four was originally designed by Howard Wexler and Ned Str
 
 In game theory this game is a solved game; the first player can always win if they play optimally.
 
-The tokens displayed are based on coins, silver octopus litra from Siciliy 460 BCE, and a Korean coin from the 1800s CE.
+The tokens displayed are based on coins, silver octopus litra from Sicily 460 BCE, and a Korean coin from the 1800s CE.
 
 ![Screenshot of the Connect Four game](https://imgur.com/TfoYKfi.jpg)
 
