@@ -1,7 +1,5 @@
 # Connect Four
 
-***Connect Four*** 
-
 The real-world Connect Four was originally designed by Howard Wexler and Ned Strongin in 1974.
 
 In game theory this game is a solved game; the first player can always win if they play optimally.
