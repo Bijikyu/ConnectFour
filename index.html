@@ -1,39 +1,3 @@
-```html
-<!-- This HTML document is a template for a Connect Four game webpage. It includes references to external stylesheets, fonts, and scripts, and defines the structure and content of the game interface. -->
-
-<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
-<html lang="en"> <!-- Starts an HTML document and specifies the language as English -->
-<head> <!-- Contains meta-information about the document -->
-    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to ensure the site is responsive -->
-    <title></title> <!-- Sets the title of the document, which is currently empty -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> <!-- Links to the Lato font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet"> <!-- Links to the Montez font from Google Fonts -->
-    <link rel="stylesheet" href="main.css"/> <!-- Links to an external stylesheet for the page's styling -->
-    <script defer src='main.js'></script> <!-- Links to an external JavaScript file and defers its execution until after the document has been parsed -->
-</head>
-<body> <!-- Contains the content of the document -->
-    <h1>Connect Four</h1> <!-- Defines the main heading of the webpage -->
-    <div id='theDiv'> <!-- Container for the game board and related elements -->
-        <img src="https://imgur.com/g5FCpL1.png" alt="Connect Four Game Board" id='brdGme'> <!-- Displays the game board image -->
-        <!-- The following buttons represent the holes on the Connect Four board where players can place their tokens -->
-        <button id='hol0' class='c4Hol row1 col1'></button>
-        <button id='hol1' class='c4Hol row1 col2'></button>
-        <button id='hol2' class='c4Hol row1 col3'></button>
-        <!-- ... additional button elements omitted for brevity ... -->
-        <button id='hol41' class='c4Hol row6 col7'></button>
-        <div id='topMsg'></div> <!-- Container for displaying messages to the player -->
-        <button id='replay'>REPLAY</button> <!-- Button to restart the game -->
-    </div>
-    <!-- The following paragraphs provide instructions and information about the game -->
-    <p class='explainer'>Play this with a friend at your computer. Take turns placing tokens by clicking a hole. Start with the bottom row, but once a token is placed, another can be placed on the hole above it.</p>
-    <p class='explainer'>Connect four of your tokens in a line to win, whether horizontally, vertically or diagonally, while preventing your opposed player from winning first.</p>
-    <p class='explainer'>In game theory this game is a solved game; the first player can always win if they play optimally.</p>
-    <p class='explainer'>Despite rumor to the contrary, Connect Four was not created by David Bowie, but was created by Elvis when he was inspired by putting four fried eggs on a PB & J sandwich.</p>
-</body>
-<footer>Copyright © Brian Quezada 2020</footer> <!-- Defines the footer of the document and includes copyright information -->
-</html>
-```
 <!DOCTYPE html>
 <html lang="en">
 <head>
