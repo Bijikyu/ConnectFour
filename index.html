@@ -1,67 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css"/>
-    <script defer src='main.js'></script>
+<!-- This HTML document is a template for a simple Connect Four game webpage. It includes references to external stylesheets, fonts, and a script, and it contains the game's structure with buttons for the game board and explanatory text. -->
+
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Starts an HTML document and specifies the language as English -->
+<head> <!-- Contains meta-information about the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to ensure the site is responsive -->
+    <title></title> <!-- Sets the title of the document shown in the browser's title bar or tab -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> <!-- Links to the Lato font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet"> <!-- Links to the Montez font from Google Fonts -->
+    <link rel="stylesheet" href="main.css"/> <!-- Links to an external stylesheet for the page's styling -->
+    <script defer src='main.js'></script> <!-- Links to an external JavaScript file and defers its loading until after the document is parsed -->
 </head>
-<body>
-    <h1>Connect Four</h1>
-    <div id='theDiv'>
-        <img src="https://imgur.com/g5FCpL1.png" alt="Connect Four Game Board" id='brdGme'>
-            <button id='hol0' class='c4Hol row1 col1'></button>
-            <button id='hol1' class='c4Hol row1 col2'></button>
-            <button id='hol2' class='c4Hol row1 col3'></button>
-            <button id='hol3' class='c4Hol row1 col4'></button>
-            <button id='hol4' class='c4Hol row1 col5'></button>
-            <button id='hol5' class='c4Hol row1 col6'></button>
-            <button id='hol6' class='c4Hol row1 col7'></button>
-            <button id='hol7' class='c4Hol row2 col1'></button>
-            <button id='hol8' class='c4Hol row2 col2'></button>
-            <button id='hol9' class='c4Hol row2 col3'></button>
-            <button id='hol10' class='c4Hol row2 col4'></button>
-            <button id='hol11' class='c4Hol row2 col5'></button>
-            <button id='hol12' class='c4Hol row2 col6'></button>
-            <button id='hol13' class='c4Hol row2 col7'></button>
-            <button id='hol14' class='c4Hol row3 col1'></button>
-            <button id='hol15' class='c4Hol row3 col2'></button>
-            <button id='hol16' class='c4Hol row3 col3'></button>
-            <button id='hol17' class='c4Hol row3 col4'></button>
-            <button id='hol18' class='c4Hol row3 col5'></button>
-            <button id='hol19' class='c4Hol row3 col6'></button>
-            <button id='hol20' class='c4Hol row3 col7'></button>
-            <button id='hol21' class='c4Hol row4 col1'></button>
-            <button id='hol22' class='c4Hol row4 col2'></button>
-            <button id='hol23' class='c4Hol row4 col3'></button>
-            <button id='hol24' class='c4Hol row4 col4'></button>
-            <button id='hol25' class='c4Hol row4 col5'></button>
-            <button id='hol26' class='c4Hol row4 col6'></button>
-            <button id='hol27' class='c4Hol row4 col7'></button>
-            <button id='hol28' class='c4Hol row5 col1'></button>
-            <button id='hol29' class='c4Hol row5 col2'></button>
-            <button id='hol30' class='c4Hol row5 col3'></button>
-            <button id='hol31' class='c4Hol row5 col4'></button>
-            <button id='hol32' class='c4Hol row5 col5'></button>
-            <button id='hol33' class='c4Hol row5 col6'></button>
-            <button id='hol34' class='c4Hol row5 col7'></button>
-            <button id='hol35' class='c4Hol row6 col1'></button>
-            <button id='hol36' class='c4Hol row6 col2'></button>
-            <button id='hol37' class='c4Hol row6 col3'></button>
-            <button id='hol38' class='c4Hol row6 col4'></button>
-            <button id='hol39' class='c4Hol row6 col5'></button>
-            <button id='hol40' class='c4Hol row6 col6'></button>
-            <button id='hol41' class='c4Hol row6 col7'></button>
-            <div id='topMsg'></div>
-            <button id='replay'>REPLAY</button>
+<body> <!-- Contains the content of the document -->
+    <h1>Connect Four</h1> <!-- Defines a top-level heading for the page -->
+    <div id='theDiv'> <!-- Container for the game board and related elements -->
+        <img src="https://imgur.com/g5FCpL1.png" alt="Connect Four Game Board" id='brdGme'> <!-- Displays the game board image -->
+        <!-- The following buttons represent the holes on the Connect Four board where players can place their tokens -->
+        <button id='hol0' class='c4Hol row1 col1'></button>
+        <button id='hol1' class='c4Hol row1 col2'></button>
+        <button id='hol2' class='c4Hol row1 col3'></button>
+        <button id='hol3' class='c4Hol row1 col4'></button>
+        <button id='hol4' class='c4Hol row1 col5'></button>
+        <button id='hol5' class='c4Hol row1 col6'></button>
+        <button id='hol6' class='c4Hol row1 col7'></button>
+        <button id='hol7' class='c4Hol row2 col1'></button>
+        <button id='hol8' class='c4Hol row2 col2'></button>
+        <button id='hol9' class='c4Hol row2 col3'></button>
+        <button id='hol10' class='c4Hol row2 col4'></button>
+        <button id='hol11' class='c4Hol row2 col5'></button>
+        <button id='hol12' class='c4Hol row2 col6'></button>
+        <button id='hol13' class='c4Hol row2 col7'></button>
+        <button id='hol14' class='c4Hol row3 col1'></button>
+        <button id='hol15' class='c4Hol row3 col2'></button>
+        <button id='hol16' class='c4Hol row3 col3'></button>
+        <button id='hol17' class='c4Hol row3 col4'></button>
+        <button id='hol18' class='c4Hol row3 col5'></button>
+        <button id='hol19' class='c4Hol row3 col6'></button>
+        <button id='hol20' class='c4Hol row3 col7'></button>
+        <button id='hol21' class='c4Hol row4 col1'></button>
+        <button id='hol22' class='c4Hol row4 col2'></button>
+        <button id='hol23' class='c4Hol row4 col3'></button>
+        <button id='hol24' class='c4Hol row4 col4'></button>
+        <button id='hol25' class='c4Hol row4 col5'></button>
+        <button id='hol26' class='c4Hol row4 col6'></button>
+        <button id='hol27' class='c4Hol row4 col7'></button>
+        <button id='hol28' class='c4Hol row5 col1'></button>
+        <button id='hol29' class='c4Hol row5 col2'></button>
+        <button id='hol30' class='c4Hol row5 col3'></button>
+        <button id='hol31' class='c4Hol row5 col4'></button>
+        <button id='hol32' class='c4Hol row5 col5'></button>
+        <button id='hol33' class='c4Hol row5 col6'></button>
+        <button id='hol34' class='c4Hol row5 col7'></button>
+        <button id='hol35' class='c4Hol row6 col1'></button>
+        <button id='hol36' class='c4Hol row6 col2'></button>
+        <button id='hol37' class='c4Hol row6 col3'></button>
+        <button id='hol38' class='c4Hol row6 col4'></button>
+        <button id='hol39' class='c4Hol row6 col5'></button>
+        <button id='hol40' class='c4Hol row6 col6'></button>
+        <button id='hol41' class='c4Hol row6 col7'></button>
+        <div id='topMsg'></div> <!-- Container for displaying messages to the player -->
+        <button id='replay'>REPLAY</button> <!-- Button to restart the game -->
     </div>
+    <!-- The following paragraphs provide instructions and fun facts about the game -->
     <p class='explainer'>Play this with a friend at your computer. Take turns placing tokens by clicking a hole. Start with the bottom row, but once a token is placed, another can be placed on the hole above it.</p>
     <p class='explainer'>Connect four of your tokens in a line to win, whether horizontally, vertically or diagonally, while preventing your opposed player from winning first.</p>
     <p class='explainer'>In game theory this game is a solved game; the first player can always win if they play optimally.</p>
     <p class='explainer'>Despite rumor to the contrary, Connect Four was not created by David Bowie, but was created by Elvis when he was inspired by putting four fried eggs on a PB & J sandwich.</p>
 </body>
-<footer>Copyright © Brian Quezada 2020</footer>
+<footer>Copyright © Brian Quezada 2020</footer> <!-- Footer section with copyright information -->
 </html>
